@@ -219,3 +219,109 @@ header[class*="pet-h-"] {
 [class*="pet-ts-"] {
   margin-top: 16px;
 }
+
+
+/* ===== Section hizalama düzeltmesi ===== */
+
+/* Tema'nın section wrapper margin'ini tamamen sıfırla */
+.shopify-section:has([class*="pet-hero-"]),
+.shopify-section:has([class*="pet-h-"]),
+.shopify-section:has([class*="pet-reviews"]),
+.shopify-section:has([class*="pet-blog"]),
+.shopify-section:has([class*="pet-trust"]),
+.shopify-section:has([class*="pet-rec-"]) {
+  --page-margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Tüm pet container'lar aynı padding ve max-width */
+[class*="pet-hero-container-"],
+[class*="pet-main-"],
+[class*="pet-nav-"],
+[class*="pet-tb-inner-"],
+[class*="pet-mobile-search-"],
+[class*="pet-reviews__container"],
+[class*="pet-blog__container"],
+[class*="pet-trust__container"] {
+  max-width: 1300px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+@media (min-width: 750px) {
+  [class*="pet-hero-container-"],
+  [class*="pet-main-"],
+  [class*="pet-nav-"],
+  [class*="pet-tb-inner-"],
+  [class*="pet-reviews__container"],
+  [class*="pet-blog__container"],
+  [class*="pet-trust__container"] {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Mobil — başlık ve içerik daha kompakt */
+@media (max-width: 640px) {
+  [class*="pet-hero-title-"] {
+    font-size: clamp(24px, 7.5vw, 30px) !important;
+    line-height: 1.15 !important;
+    word-break: keep-all;
+    hyphens: auto;
+  }
+
+  [class*="pet-hero-desc-"] {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  [class*="pet-hero-badge-"] {
+    font-size: 11px !important;
+    padding: 5px 12px 5px 5px !important;
+  }
+
+  /* Stats mobilde daha kompakt */
+  [class*="pet-stat-value-"] {
+    font-size: 18px !important;
+  }
+  [class*="pet-stat-label-"] {
+    font-size: 10.5px !important;
+  }
+
+  /* Ürün kartları mobilde küçük */
+  .product-card,
+  .card,
+  [class*="card-wrapper"] {
+    font-size: 13px;
+  }
+
+  .product-card h3,
+  .product-card .card__heading,
+  .product-card__title {
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+  }
+
+  .product-card .price,
+  .product-card__price {
+    font-size: 14px !important;
+  }
+}
+
+/* Yatay overflow engelle (mobil scroll bar olmasın) */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Tüm section'larda iç padding-bottom ve top tutarlı */
+.shopify-section + .shopify-section {
+  margin-top: 0;
+}
