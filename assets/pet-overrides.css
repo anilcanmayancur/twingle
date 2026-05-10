@@ -168,3 +168,43 @@ select:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--pet-primary);
 }
+/* ===== Pet sections — tema grid wrapper'ından çık ===== */
+
+/* Shopify section wrapper'ı düzleştir */
+.shopify-section:has([class*="pet-hero-"]),
+.shopify-section:has([class*="pet-reviews"]),
+.shopify-section:has([class*="pet-blog"]),
+.shopify-section:has([class*="pet-trust"]),
+.shopify-section:has([class*="pet-h-"]),
+.shopify-section:has([class*="pet-rec-"]) {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Pet section'ları tam genişlikte spanle */
+[class*="pet-hero-"],
+section[class*="pet-reviews"],
+section[class*="pet-blog"],
+section[class*="pet-trust"],
+header[class*="pet-h-"] {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Container'lar kendi padding'ini kullansın */
+[class*="pet-hero-container-"],
+[class*="pet-reviews__container"],
+[class*="pet-blog__container"],
+[class*="pet-trust__container"],
+[class*="pet-main-"],
+[class*="pet-nav-"],
+[class*="pet-tb-inner-"] {
+  width: 100%;
+  box-sizing: border-box;
+}
