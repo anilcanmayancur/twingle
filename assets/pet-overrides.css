@@ -208,3 +208,14 @@ header[class*="pet-h-"] {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* Floating badge çakışmasını düzelt */
+[class*="pet-hero-floating-badge-"] {
+  top: -14px !important;
+  left: 16px !important;
+  z-index: 10 !important;
+}
+
+[class*="pet-ts-"] {
+  margin-top: 16px;
+}
